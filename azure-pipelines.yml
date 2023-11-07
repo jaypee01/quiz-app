@@ -17,3 +17,14 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- script: |
+    # Install Netlify CLI (if not already installed)
+    npm install -g netlify-cli
+
+    # Log in to your Netlify account (replace with your own Netlify access token)
+    netlify login -t 6V4fnHVPBkNBklnm7jQLWKdcqb0oVbtLVGOgoWbXX1Y
+
+    # Deploy to Netlify
+    netlify deploy --prod
+  displayName: 'Build and Deploy to Netlify'
